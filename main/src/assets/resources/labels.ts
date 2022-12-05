@@ -1,0 +1,21 @@
+export const labels = {
+    "loginTitle":"CHECK-IN",
+    "backToCheckIn":"Back to check-in",
+    "pageTitle":"RETRIEVE YOUR BOOKING",
+    "logInText":"You can find your booking by filling out your family name and the booking code in your booking confirmation.",
+    "bookingCode": "Booking Code",
+    "familyName": "Family name",
+    "submit": "Retrieve booking",
+    "familyNameRequired": "Family name is required.",
+    "familyNameMinlength": "The family name must contain at least 2 characters.",
+    "bookingCodeRequired": "The booking code is required.",
+    "bookingCodeMinlength": "The booking code must contain atleast 5 characters.",
+    "bookingCodePattern": "All alphabets and Numbers 2-9 are allowed in booking code.",
+    "passengerDetails": "Passenger Details",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "ItineraryDetails": "Itinerary Details",
+    "flight":"Flight",
+    "stops":"Stops",
+    "cabin":"Cabin"
+};

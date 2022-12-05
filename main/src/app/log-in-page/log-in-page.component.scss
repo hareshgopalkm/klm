@@ -1,0 +1,162 @@
+
+
+button[type=submit] {
+  background-color: #c70000;
+  color: white;
+  height: 60px;
+  line-height: 40px;
+  padding: 0 24px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 24px;
+
+
+}
+
+body{
+	margin:0;
+	color:#6a6f8c;
+	background:#c8c8c8;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+*,:after,:before{box-sizing:border-box}
+
+a{color:inherit;text-decoration:none}
+
+.booking-wrap{
+	width: 100%;
+    margin: auto;
+    max-width: 42%;
+    min-height: 670px;
+    position: relative;
+    border: 1px #ccc solid;
+}
+.booking-wrapper{
+	border: 1px #ccc solid;
+	padding: 40px 8%;
+}
+
+
+.booking-wrapper .tab,
+.booking-form .group .label,
+.booking-form .group .button{
+	text-transform:uppercase;
+}
+
+.booking-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.booking-form .group{
+	margin-bottom:15px;
+}
+.booking-form .group .label,
+.booking-form .group .input,
+.booking-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.booking-form .group .input,
+.booking-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+
+.booking-form .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+.booking-form .group .button{
+	background:#1161ee;
+  margin-top: 50px;
+}
+.booking-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1); 
+}
+.booking-form .group label .icon:before,
+.booking-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.booking-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.booking-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+}
+
+.booking-wrapper h1 {
+	color: #000;
+    font-size: 30px;
+    font-family: inherit;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.booking-details {
+  margin: 30px auto 24px auto;
+  background: #ececec;
+  padding: 30px 50px;
+  opacity: 0.8;
+  max-width: 660px;
+  h3 {
+    font-size: 16px;
+    color: #454545;
+  }
+  span {
+    font-size: 14px;
+    color: #466148;
+}
+
+}
+
+.login-form-wrapper {
+    width: 45%;
+    margin: 0 auto;
+}
+
+.submit-button {
+	background: #d20202;
+    width: 176px;
+    margin: 30px auto;
+    display: block;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    height: 45px;
+    border-radius: 4px;
+}
+
+.submit-button[disabled] {
+    background: #aeaaaa;
+}

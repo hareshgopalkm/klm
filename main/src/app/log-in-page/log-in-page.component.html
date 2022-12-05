@@ -1,0 +1,48 @@
+
+<div class="login-form-wrapper">
+  <form [formGroup]="loginForm" class="check-in-form content-card" (ngSubmit)="checkLogin()">
+      <div class="booking-wrapper">
+        <h1>{{labels.pageTitle }}</h1>
+          <p>
+            {{labels.logInText}}
+          </p>
+          <div class="sign-in-wrapper">
+            <div class="group">
+              <label for="user" class="label">
+                {{labels.bookingCode}}
+              </label>
+              <input id="user" required maxlength="6" minlength="5" pattern="^[a-zA-Z2-9]*$" formControlName="bookingCode" type="text" class="input">
+              <span class="form-error" *ngIf="bookingCode && bookingCode.touched && bookingCode.errors?.['required']">
+                {{labels.bookingCodeRequired}}
+              </span>
+              <span class="form-error" *ngIf="bookingCode && bookingCode.invalid && bookingCode.errors?.['minlength']">
+                {{labels.bookingCodeMinlength}}
+              </span>
+              <span class="form-error" *ngIf="bookingCode && bookingCode.invalid && bookingCode.errors?.['pattern']">
+                {{labels.bookingCodePattern}}
+              </span>
+            </div>
+            <div class="group">
+              <label for="pass" class="label">
+                {{labels.familyName}}
+              </label>
+              <input id="family-name" required maxlength="30" minlength="2" formControlName="familyName" type="text"
+                class="input" data-type="password">
+              <span class="form-error" *ngIf="familyName && familyName.touched && familyName.errors?.['required']">
+                {{labels.familyNameRequired}}
+              </span>
+              <span class="form-error" *ngIf="familyName && familyName.touched && familyName.errors?.['minlength']">
+                {{labels.familyNameMinlength}}
+              </span>
+            </div>
+            <div class="btn-group">
+              <button [disabled] ="loginForm.invalid" class="submit-button">
+                {{labels.submit}}
+              </button>
+            </div>
+            <span *ngIf="loginForm.valid" class="form-error">{{retrieveError}}</span>  
+          </div>
+
+      </div>
+  </form>
+</div>

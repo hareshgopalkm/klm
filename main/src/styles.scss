@@ -1,0 +1,116 @@
+
+body {
+  font-family: "Tahoma",Roboto,sans-serif;
+  line-height: 1.8em;
+  font-size: 18px;
+}
+
+app-root {
+
+  h1 {
+    text-align: center;
+    line-height: 1.5em;
+  }
+
+  .content-card {
+    margin: 15px auto;
+    padding: 20px;
+  }
+
+  input {
+    width: calc(100% - 24px);
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+
+    &.ng-touched.ng-dirty.ng-invalid {
+      border-color: red;
+    }
+  }
+
+  .input-wrapper {
+    margin: 0 0 24px 0;
+  }
+
+  label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-error {
+    font-size: 14px;   
+    color: #ff6b6b;
+  }
+  .accordion {
+    display: block;
+    max-width: 800px;
+  }
+  
+  .accordion-item {
+    display: block;
+    border: solid 1px #ffffff;
+  }
+  
+  .accordion-item + .accordion-item {
+    border-top: none;
+  }
+  
+  .accordion-item-header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    background: #63c2e9;
+    color: #fff;
+  }
+  
+  .accordion-item-description {
+    font-size: 0.85em;
+    color: #202cd6;
+  }
+  
+  .accordion-item-header,
+  .accordion-item-body {
+    padding: 10px;
+  }
+  
+  .accordion-item-header:hover {
+    cursor: pointer;
+    background-color: #87ceebc7;
+  }
+  
+  .accordion-item:first-child {
+    border-radius: 4px 4px 0 0;
+  }
+  .accordion-item:last-child  {
+    border-radius: 0 0 4px 4px;
+  }
+  .booking-details .accordion-item-header span.accordion-item-description {
+    font-size: 25px;
+    font-weight: bold;
+}
+.accordion-item-body {
+  background: #fafafa;
+}
+}
+
+.header-section {
+  background: url('./assets/img/af_pattern_bg.png');
+  width: 100%;
+  height: 63px;
+  text-align: center;
+  padding-top: 28px;
+  .header-title {
+    color: #fff;
+  }
+
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
