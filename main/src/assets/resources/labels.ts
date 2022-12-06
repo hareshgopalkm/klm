@@ -17,5 +17,6 @@ export const labels = {
     "ItineraryDetails": "Itinerary Details",
     "flight":"Flight",
     "stops":"Stops",
-    "cabin":"Cabin"
+    "cabin":"Cabin",
+    "duration":"Duration"
 };

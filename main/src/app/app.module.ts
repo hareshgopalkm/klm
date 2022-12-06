@@ -11,6 +11,7 @@ import {CdkAccordionModule} from '@angular/cdk/accordion';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApolloModule } from 'apollo-angular';
 import { CommonService } from './services/common-service';
+import {ConvertToHourseMinutesPipe}  from './transformTime.pipe'
 
 const routes: Routes = [
   {path: 'log-in', component: LogInPageComponent},
@@ -32,7 +33,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     CdkAccordionModule,
     ReactiveFormsModule,
-    ApolloModule
+    ApolloModule,
+    ConvertToHourseMinutesPipe
   ],
   providers: [CommonService
   ],

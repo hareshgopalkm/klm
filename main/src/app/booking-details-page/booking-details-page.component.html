@@ -53,6 +53,10 @@
               <span>{{segment.marketingFlight?.carrier?.name}} {{segment.marketingFlight?.number}}</span>
             </div>
             <div>
+              <label> {{labels.duration}}</label>
+              <span> {{connection.duration | convertToHoursMinutes }}</span>
+            </div>
+            <div>
               <label> {{labels.stops}}</label>
               <span>{{segment.marketingFlight?.numberOfStops}}</span>
             </div>

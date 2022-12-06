@@ -29,4 +29,8 @@ export class BookingDetailsComponent implements OnInit {
         }
       });
   }
+
+  getDuration(time: string) {
+
+  }
 }
