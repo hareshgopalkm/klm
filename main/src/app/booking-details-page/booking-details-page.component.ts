@@ -10,18 +10,19 @@ import * as resources from '../../assets/resources/labels';
   templateUrl: './booking-details-page.component.html',
   styleUrls: ['./booking-details-page.component.scss']
 })
+
 export class BookingDetailsComponent implements OnInit {
   labels = resources.labels;
-  bookingData:Booking|undefined;
+  bookingData: Booking | undefined;
   constructor(
     private readonly router: Router, private commonService: CommonService) {
   }
 
-   ngOnInit() {
+  ngOnInit() {
     const loginData = this.commonService.getLogin();
-    this.commonService.queryBookingDetails(FULL_BOOKING,loginData.bookingCode,loginData.familyName)
+    this.commonService.queryBookingDetails(FULL_BOOKING, loginData.bookingCode, loginData.familyName)
       .subscribe(response => {
-        if(response.errors?.length || !response.data) {
+        if (response.errors?.length || !response.data) {
           this.router.navigate(['log-in']);
         } else {
           this.bookingData = response.data.getBooking;

@@ -6,6 +6,7 @@ import * as resources from '../assets/resources/labels';
   templateUrl: './app.component.html',
   styleUrls: []
 })
+
 export class AppComponent {
   labels = resources.labels;
 }

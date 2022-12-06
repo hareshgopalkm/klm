@@ -11,18 +11,19 @@ import * as resources from '../../assets/resources/labels';
   templateUrl: './log-in-page.component.html',
   styleUrls: ['./log-in-page.component.scss']
 })
+
 export class LogInPageComponent {
-  loginForm:FormGroup = new FormGroup({
-    bookingCode : new FormControl(''),
+  loginForm: FormGroup = new FormGroup({
+    bookingCode: new FormControl(''),
     familyName: new FormControl('')
   });
   labels = resources.labels;
-  retrieveError:string = '';
-  get bookingCode(){
+  retrieveError: string = '';
+  get bookingCode() {
     return this.loginForm.get('bookingCode');
   }
-  get familyName(){
-    return  this.loginForm.get('familyName');
+  get familyName() {
+    return this.loginForm.get('familyName');
   }
 
   QUERY_BOOKING = gql`
@@ -33,28 +34,28 @@ export class LogInPageComponent {
   }`;
 
   constructor(
-    private readonly router: Router,private apolloClient: Apollo, private commonService: CommonService) {
+    private readonly router: Router, private apolloClient: Apollo, private commonService: CommonService) {
   }
 
-   checkLogin(): void {
+  checkLogin(): void {
     this.retrieveError = ''
-    if(this.loginForm.valid) {
+    if (this.loginForm.valid) {
       const bookingCode = this.loginForm.value.bookingCode;
       const familyName = this.loginForm.value.familyName;
       this.retrieveError = '';
-      this.commonService.queryBookingDetails(this.QUERY_BOOKING,this.loginForm.value.bookingCode,
-         this.loginForm.value.familyName).pipe(catchError((err) => {
-        this.retrieveError = 'Some error occured';
-        throw err;
-      })).subscribe(response => {
-        if(response.errors?.length) {        
-          this.retrieveError = 'Invalid Credentials'
-          setTimeout(()=>{this.retrieveError = ''}, 3000);          
-        } else {
-          this.commonService.setLogin(bookingCode,familyName)
-          this.router.navigate(['booking-details']);
-        }
-      });
+      this.commonService.queryBookingDetails(this.QUERY_BOOKING, this.loginForm.value.bookingCode,
+        this.loginForm.value.familyName).pipe(catchError((err) => {
+          this.retrieveError = 'Some error occured';
+          throw err;
+        })).subscribe(response => {
+          if (response.errors?.length) {
+            this.retrieveError = 'Invalid Credentials'
+            setTimeout(() => { this.retrieveError = '' }, 3000);
+          } else {
+            this.commonService.setLogin(bookingCode, familyName)
+            this.router.navigate(['booking-details']);
+          }
+        });
     }
   }
 
